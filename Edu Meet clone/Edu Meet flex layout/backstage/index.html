@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backstage</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .header {
+      position: fixed;
+      padding: 25px;
+      width: 17%;
+    }
+    .header img {
+      width: 100%;
+    }
+
+    .main {
+      width: 100%;
+      min-height: 200vh;
+      
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 20%;
+    }
+
+    .container img {
+      width: 60%;
+    }
+
+    .section {
+      width: 80%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5%;
+      
+    }
+
+    .section h4 {
+      font-size: 18px;
+    }
+
+    .section .disc {
+      text-align: center;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 4%;
+        display: flex;
+    }
+
+    .disc-main {
+        width: 20%;
+        padding: 0px 25px;
+    } 
+
+    .disc-main p {
+        text-align: left;
+        font-weight: 700;
+        font-size: 18px;
+        
+    }
+
+    .disc-main a{
+        color: black;
+        font-size: 12px;
+        
+
+    }
+
+    .disc-main h6{
+        font-weight: 700;
+        text-decoration: underline;
+        font-size: 18px;
+        margin-top: 50px;
+    }
+  </style>
+
+  <body>
+    <div class="main">
+      <div class="header">
+        <img src="https://backstagetalks.com/img/logo.png" alt="LOGO" />
+      </div>
+      <div class="container">
+        <div class="section s1">
+          <img
+            class="book1"
+            src="https://backstagetalks.com/img/backstagetalks_cover_issue_7.png"
+            alt=""
+          />
+          <div class="disc">
+            <h4>Issue #7</h4>
+
+            <h6>BUY HERE (Europe)</h6>
+            <h6>BUY HERE (UK & Overseas)</h6>
+            <h6>or in selected stores</h6>
+          </div>
+        </div>
+
+        <div class="section s2">
+          <img
+            class="book2"
+            src="https://backstagetalks.com/img/backstagetalks_cover_issue_6.png"
+            alt=""
+          />
+          <div class="disc">
+            <h4>Issue #7</h4>
+
+            <h6>BUY HERE (Europe)</h6>
+            <h6>BUY HERE (UK & Overseas)</h6>
+            <h6>or in selected stores</h6>
+          </div>
+        </div>
+
+        <div class="section s3">
+          <img
+            class="book3"
+            src="https://backstagetalks.com/img/backstagetalks_cover_issue_5.png"
+            alt=""
+          />
+          <div class="disc">
+            <h4>Issue #7</h4>
+
+            <h6>BUY HERE (Europe)</h6>
+            <h6>BUY HERE (UK & Overseas)</h6>
+            <h6>or in selected stores</h6>
+          </div>
+        </div>
+        <div class="section s4">
+          <img
+            class="book4"
+            src="https://backstagetalks.com/img/backstagetalks_cover_issue_4.png"
+            alt=""
+          />
+          <div class="disc">
+            <h4>Issue #7</h4>
+
+            <h6>BUY HERE (Europe)</h6>
+            <h6>BUY HERE (UK & Overseas)</h6>
+            <h6>or in selected stores</h6>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-in-1">
+          <div class="disc-main">
+            <p>
+              Backstage Talks is a magazine of casual, but in depth dialogues on
+              design and business. Our decisions shape and influence this
+              complex world—to have a chance to make the right ones, we need to
+              talk.
+            </p>
+            <a href="">© 2023 Published by Büro Milk</a>
+            <h6>
+                Privacy Policy
+            </h6>
+          </div>
+        </div>
+        <div class="footer-in-2">
+            <ul>
+                <li>#Issue1</li>
+                <li>#Issue2</li>
+                <li>#Issue3</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+      integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"
+      integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      gsap.to(".main", {
+        backgroundColor: " #ff608c",
+        scrollTrigger: {
+          trigger: ".s1",
+          scroller: "body",
+          markers: true,
+          //   start: "top 60%",
+          end: "bottom 100%",
+          scrub: true,
+        },
+      });
+      gsap.to(".main", {
+        backgroundColor: " #ffff",
+        scrollTrigger: {
+          trigger: ".s2",
+          scroller: "body",
+          markers: true,
+          //   start: "top 60%",
+          end: "bottom 100%",
+          scrub: true,
+        },
+      });
+
+      gsap.to(".main", {
+        backgroundColor: " #60ffec",
+        scrollTrigger: {
+          trigger: ".s3",
+          scroller: "body",
+          markers: true,
+          //   start: "top 30%",
+          end: "bottom 100%",
+          scrub: true,
+        },
+      });
+
+      gsap.to(".main", {
+        backgroundColor: " #d97700",
+        scrollTrigger: {
+          trigger: ".s4",
+          scroller: "body",
+          markers: true,
+          //   start: "top 30%",
+          end: "bottom 100%",
+          scrub: true,
+        },
+      });
+    </script>
+  </body>
+</html>
